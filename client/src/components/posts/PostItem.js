@@ -68,12 +68,12 @@ class PostItem extends Component {
 		let embed;
 		if (this.isLink(post.post)) {
 			embed = (
-				<div className="h-75 mb-2 embed-responsive embed-responsive-16by9">
+				<div className="h-90 mb-2 embed-responsive embed-responsive-16by9">
 					<iframe className="embed-responsive-item" src={post.post} />
 				</div>
 			);
 		} else {
-			embed = <div className="h-50">{post.post}</div>;
+			embed = <div className="h-80">{post.post}</div>;
 		}
 		return (
 			<div className="card card-body mb-3">
@@ -88,7 +88,7 @@ class PostItem extends Component {
 					<div className="col-md-10">
 						<p className="lead font-weight-bold">{post.title}</p>
 						{embed}
-						<div className={this.isLink(post.post) ? 'mt-5' : ''}>
+						<div className={this.isLink(post.post) ? 'mt-1' : ''}>
 							{showActions ? (
 								<span>
 									<button
